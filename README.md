@@ -15,7 +15,7 @@ The **FoodCatalogue** service is a crucial component of the **MealMate** project
 
 ### Prerequisites
 
-- **JDK 11** or higher
+- **JDK 17** or higher
 - **Maven**
 - **MySQL Database**
 - **Eureka Service** (for service discovery)
@@ -54,33 +54,32 @@ The **FoodCatalogue** service is a crucial component of the **MealMate** project
    mvn spring-boot:run
 
 ## API Endpoints
-### Get All Food Items
-- URL: /api/food-items
-- Method: GET
-- Description: Retrieve a list of all food items.
-- Response: JSON array of food items.
 
 ### Get Food Item by ID
-- URL: /api/food-items/{id}
+- URL: /api/foodCatalogue/foodCataloguePage/{restaurantId}
 - Method: GET
-- Description: Retrieve a specific food item by its ID.
+- Description: Retrieve a specific food item by restaurant ID.
 - Response: JSON object of the food item.
 
 ### Add New Food Item
-- URL: /api/food-items
+- URL: /api/foodCatalogue/foodItems
 - Method: POST
 - Description: Add a new food item to the catalog.
 - Request Body: JSON object with food item details.
 
-```bash
-{
-  "id": 1,
-  "itemName": "Pizza",
-  "itemDescription": "Delicious cheese pizza",
-  "isVeg": true,
-  "price": 9.99,
-  "restaurantId": 1
-}
+   ```bash
+   {
+     "id": 1,
+     "itemName": "Pizza",
+     "itemDescription": "Delicious cheese pizza",
+     "isVeg": true,
+     "price": 9.99,
+     "restaurantId": 1
+   }
+### Screenshots
+![image](https://github.com/user-attachments/assets/3b5f44d3-f152-48c9-8f13-1dfcb736b11f)
+
+![image](https://github.com/user-attachments/assets/9006f4c7-f109-4eb0-a7ff-2eb7a8a9f027)
 
 
 
