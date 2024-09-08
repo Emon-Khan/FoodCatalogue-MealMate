@@ -82,5 +82,41 @@ The **FoodCatalogue** service is a crucial component of the **MealMate** project
 ![image](https://github.com/user-attachments/assets/9006f4c7-f109-4eb0-a7ff-2eb7a8a9f027)
 
 
+## Docker Instructions
 
+If you prefer using Docker for this service, you can pull and run the FoodCatalogue-MealMate image directly from Docker Hub.
+
+### Pulling the Image from Docker Hub
+
+1. To pull the image, use the following command:
+    ```bash
+    docker pull rkemon94/foodcatalogue-mealmate:latest
+    ```
+
+### Running the FoodCatalogue Service with Docker
+
+2. Run the FoodCatalogue service in a Docker container:
+    ```bash
+    docker run --name foodcatalogue-container -p 9092:9092 rkemon94/foodcatalogue-mealmate:latest
+    ```
+
+3. Access the service:
+
+   After running the container, you can access the API on http://localhost:9092.
+
+### Stopping and Removing the Container
+
+- To stop the running container:
+    ```bash
+    docker stop foodcatalogue-container
+    ```
+
+- To remove the container after stopping it:
+    ```bash
+    docker rm foodcatalogue-container
+    ```
+
+## Conclusion
+
+This FoodCatalogue service is designed to handle food item management for restaurants in the MealMate microservices ecosystem. Running it via Docker ensures a smooth deployment process, and it integrates seamlessly with other MealMate services such as the EurekaService.
 
